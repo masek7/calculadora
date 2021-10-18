@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.calculadora{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "box-1 box-1 box-1 box-1"
+    "box-2 box-3 box-4 box-5"
+    "box-6 box-7 box-8 box-9"
+    "box-10 box-11 box-12 box-13"
+    "box-14 box-15 box-16 box-17"
+    "box-18 box-19 box-20 box-17"
+    ;
+    
+    width: 350px;
+    height: 500px;
+    background-color: #333A58;
+}
+
+#display{
+    display: flex;
+    padding: 5%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #06080f;
+    color: #ffff;
+    grid-area: box-1;
+    border-style: none;
+    font-size: 40px;
+    font-family:'Open Sans', sans-serif;
+    
+}
+
+#c,#operadorPorcent,#operadorDivid,#operadorX,#operadorMenos,#operadorMais,#operadorIgual{
+    background-color: #11172b ;
+}
+
+
+.primeiraParte{
+    background-color: #3aba98;
+    color: #fff;
+    font-size: 25px;
+    border-style: none;
+    font-family:'Open Sans', sans-serif; ;
+    
+}
+
+.centroParte{
+    background-color: #06080f;
+    color: #ffff;
+    font-size: 25px;
+    border-style: none;
+    font-family:'Open Sans', sans-serif; ;
+}
+
+#operadorIgual{
+    grid-area: box-17;
+}
+#c:hover,#operadorPorcent:hover,#operadorDivid:hover,#operadorX:hover,#operadorMenos:hover,#operadorMais:hover,#operadorIgual:hover{
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #50556E;
+}
+
+
+.primeiraParte:hover{
+    transition: all 0.5s;
+    background-color: #373d57;
+    cursor: pointer;
+    
+}
+.centroParte:hover{
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #50556E;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
